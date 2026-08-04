@@ -4,7 +4,7 @@ function App() {
 
 
 
-  const count=useSelector()
+  const count=useSelector(state=>state.counter.value)
 
 
   const dispatch=useDispatch()
