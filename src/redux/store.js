@@ -5,7 +5,10 @@ import { configureStore } from "@reduxjs/toolkit"
 
 
 const store=configureStore({
-    counter:"counterReducer"
+    reducer:{
+
+        counter:"counterReducer"
+    }
 })
 
 
