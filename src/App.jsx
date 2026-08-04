@@ -1,8 +1,12 @@
 
 const App = () => {
+
+
+
   return (
     <div>
-      Hello
+      <h2>Count at:{}</h2>
+      <button onClick={}>-</button>
     </div>
   )
 }
