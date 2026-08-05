@@ -7,8 +7,7 @@ import {
 } from "./redux/CounterSlice";
 
 const App = () => {
-
-  const count=
+  const count = useSelector((state) => state.counter.count.value);
 
   const dispatch = useDispatch();
 
