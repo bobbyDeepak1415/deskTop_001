@@ -1,18 +1,19 @@
-import { createSelector, createSlice } from "@reduxjs/toolkit"
+import { createSelector, createSlice } from "@reduxjs/toolkit";
 
+const initialState = {
+  value: 0,
+};
 
-const initialState={
-    value:0
-}
+const CounterSlice = createSlice({
+  name: "counter",
+  initialState,
+  reducers: {
+    increment: (state) => {
+      state.value += 1;
+    },
+  },
+});
 
+export const { increment } = CounterSlice.actions;
 
-const CounterSlice=createSlice({
-    name:"counter",
-    initialState,
-    reducers:{
-        
-    }
-})
-
-
-
+export default CounterSlice.reducer;
