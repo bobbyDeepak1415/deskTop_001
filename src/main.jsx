@@ -8,20 +8,16 @@
 //   </StrictMode>,
 // );
 
-let arr1 = [1, 2, [3, 4, [5, 6, [7, 8], 9]]];
+let str1='AABBCAABDDEEB'
 
-function display(arr) {
-  let result = [];
+function display(str) {
+  let result = ""
 
   for (let i of arr) {
-    if (Array.isArray(i)) {
-      result.push(...display(i));
-    } else {
-      result.push(i);
-    }
+   if()
   }
 
   return result;
 }
 
-console.log(display(arr1));
+console.log(display(str1));
