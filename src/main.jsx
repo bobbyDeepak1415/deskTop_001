@@ -8,23 +8,20 @@
 //   </StrictMode>,
 // );
 
+let arr1 = [1, 2, [3, 4, [5, 6, [7, 8], 9]]];
 
-let arr1=[23,4,[5,6,[7,4,[34,23],90]]]
+function display(arr) {
+  let result = [];
 
-
-function display(arr){
-
-
-  let result=[]
-
-  for(let i of arr){
-    if(Array.isArray(i)){
-      result.push(...display(i))
+  for (let i of arr) {
+    if (Array.isArray(i)) {
+      result.push(...display(i));
+    } else {
+      result.push(i);
     }
-
-    result.push(i)
   }
 
+  return result;
 }
 
-console.log(display(arr1))
+console.log(display(arr1));
