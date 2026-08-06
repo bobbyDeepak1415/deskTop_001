@@ -8,27 +8,23 @@
 //   </StrictMode>,
 // );
 
-let str1 = "AABBCAABDDEEBA";
 
-function display(str) {
-  let result = "";
 
-  let obj = {};
+let arr1 = [3, 6, 8, 4, 2, 1, 19];
 
-  for (let i of str) {
-    obj[i] = (obj[i] || 0) + 1;
-  }
 
-  let seen=new Set()
 
-  for(let i of str){
-    if(!seen.has(i)){
-      result+=i+obj[i]
-      seen.add(i)
+
+function display(arr) {
+  for (let i = 0; i < arr.length - 1 - i; i++) {
+    if (arr[i] > arr[i + 1]) {
+      let temp = arr[i+1];
+      arr[i + 1] = arr[i];
+      arr[i] = temp;
     }
   }
 
-  return result;
+  return arr;
 }
 
-console.log(display(str1));
+console.log(display(arr1));
